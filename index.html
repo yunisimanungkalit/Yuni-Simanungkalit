@@ -5,40 +5,78 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Yuni Simanungkalit</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family: -apple-system, BlinkMacSystemFont, sans-serif}
-body{margin:0;color:#444;background:#fcfaf7}
-.hero{height:70vh;background:url('bg.jpg') center/cover no-repeat;position:relative;display:flex;align-items:center;justify-content:center;text-align:center}
-.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0.05),rgba(0,0,0,0.45))}
+*{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,sans-serif;scroll-behavior:smooth}
+body{background:#fcfaf7;color:#333}
+nav{position:fixed;top:0;width:100%;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:14px 20px;background:rgba(0,0,0,0.7);backdrop-filter:blur(10px)}
+nav .logo{color:#fff;font-weight:800;font-size:22px}
+nav .logo span{color:#ffd66b}
+nav .menu{display:flex;gap:18px}
+nav .menu a{color:#f0f0f0;text-decoration:none;font-size:14px;font-weight:500}
+nav .menu a:hover{color:#ffd66b}
+.hero{min-height:100vh;background:url('bg.jpg') center/cover no-repeat;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;padding-top:60px}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,0.15),rgba(0,0,0,0.65))}
 .hero-content{position:relative;z-index:2;color:white;padding:20px}
-.hero-content img{width:130px;height:130px;border-radius:50%;object-fit:cover;border:4px solid white;box-shadow:0 8px 30px rgba(0,0,0,0.4)}
-.hero-content h1{margin-top:14px;font-size:28px;letter-spacing:0.5px;text-shadow:0 2px 12px rgba(0,0,0,0.5)}
-.hero-content p{margin-top:6px;font-size:15px;opacity:0.95}
-.container{max-width:680px;margin:-40px auto 0;padding:20px;position:relative;z-index:3}
-.card{background:white;border-radius:22px;padding:28px;margin-bottom:18px;box-shadow:0 12px 35px rgba(0,0,0,0.1)}
-.bio{font-size:16px;line-height:1.7;white-space:pre-line}
-.btn{display:inline-block;background:#222;color:white;padding:12px 24px;border-radius:999px;text-decoration:none;font-weight:600;margin-top:10px}
+.hero-content img{width:145px;height:145px;border-radius:50%;object-fit:cover;border:4px solid #fff;box-shadow:0 10px 35px rgba(0,0,0,0.5)}
+.hero-content h1{margin-top:16px;font-size:32px}
+.hero-content p{margin-top:6px;opacity:0.95}
+section{max-width:700px;margin:0 auto;padding:70px 20px 20px}
+.card{background:#fff;border-radius:24px;padding:28px;box-shadow:0 12px 35px rgba(0,0,0,0.08);margin-bottom:20px}
 footer{text-align:center;padding:35px;color:#aaa;font-size:13px}
+.album-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.album-grid img{width:100%;height:140px;object-fit:cover;border-radius:14px}
 </style>
 </head>
 <body>
-<div class="hero">
+
+<nav>
+<div class="logo">Yuni<span>.</span></div>
+<div class="menu">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#album">Album</a>
+<a href="#musik">Musik</a>
+</div>
+</nav>
+
+<div id="home" class="hero">
 <div class="hero-content">
 <img src="bg.jpg" alt="Yuni">
 <h1>Yuni Simanungkalit</h1>
-<p>Sunset lover 🌙</p>
+<p>Hai, it's Yuni 🐣 — Sunset lover 🌙</p>
 </div>
 </div>
-<div class="container">
+
+<section id="about">
 <div class="card">
-<div class="bio">Hai, it's Yuni 🐣
-Just a little album for memories 🌻
-Thanks for stopping by...</div>
+<h2>About Me</h2>
+<p style="line-height:1.7">Hai, it's Yuni 🐣<br>Just a little album for memories 🌻<br>Thanks for stopping by...<br><br>Aku suka sunset, hiking, dan ngumpulin memori kecil yang bikin bahagia.</p>
+</div>
+</section>
+
+<section id="album">
+<div class="card">
+<h2>Album 📸</h2>
+<p>Little album for memories — nanti foto-foto kamu di sini ya!</p>
+<div class="album-grid">
+<img src="bg.jpg" alt="sunset 1">
+<img src="bg.jpg" alt="sunset 2">
+</div>
+</div>
+</section>
+
+<section id="musik">
+<div class="card">
+<h2>Musik 🎧</h2>
+<p>Lagu yang lagi aku dengerin...</p>
+<audio controls style="width:100%;margin-top:12px"><source src="music.mp3" type="audio/mpeg"></audio>
+<p style="font-size:12px;color:#999;margin-top:8px">*kalau mau tambah lagu, upload file mp3 dengan nama music.mp3</p>
 </div>
 <div class="card">
-<h2>📬 Say Hi</h2>
-<a href="https://github.com/yunisimanungkalit" class="btn">My GitHub</a>
+<h2>Say Hi ✨</h2>
+<a href="https://github.com/yunisimanungkalit" style="display:inline-block;background:#222;color:#fff;padding:12px 22px;border-radius:999px;text-decoration:none;font-weight:600">My GitHub</a>
 </div>
-</div>
+</section>
+
 <footer>© 2026 Yuni Simanungkalit — little album for memories</footer>
 </body>
 </html>
