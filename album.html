@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Album - Yuni</title>
+<style>
+body{font-family:sans-serif; padding:16px; background:#fff5f0}
+a{color:black; text-decoration:none}
+.menu{display:flex; gap:16px; font-weight:bold}
+.card{background:white; border-radius:16px; padding:16px; margin:12px 0; box-shadow:0 2px 8px #ddd}
+.card img{width:100%; border-radius:12px}
+.foto{display:none}
+.foto img{width:100%; border-radius:12px; margin-top:8px}
+button{padding:8px 16px; border-radius:20px; border:none; background:#ff8c42; color:white}
+</style>
+</head>
+<body>
+
+<div class="menu">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="album.html">Album</a>
+<a href="musik.html">Musik</a>
+</div>
+
+<h2>Album</h2>
+<p>Klik albumnya buat liat isinya:</p>
+
+<!-- 1. SUNSET -->
+<div class="card">
+<h3>🌅 Sunset</h3>
+<img src="About/IMG-20260524-WA0008.jpg">
+<button onclick="buka('sunset')">Lihat Foto</button>
+<div id="sunset" class="foto">
+<img src="About/IMG-20260524-WA0008.jpg">
+<p>Foto sunset kamu di sini</p>
+</div>
+</div>
+
+<!-- 2. PANTAI -->
+<div class="card">
+<h3>🏖️ Pantai</h3>
+<img src="About/pantai1.jpg">
+<button onclick="buka('pantai')">Lihat Foto</button>
+<div id="pantai" class="foto">
+<img src="About/pantai1.jpg">
+<p>Foto pantai kamu di sini</p>
+</div>
+</div>
+
+<!-- 3. LAMPUNG -->
+<div class="card">
+<h3>🌊 Lampung</h3>
+<img src="About/lampung1.jpg">
+<button onclick="buka('lampung')">Lihat Foto</button>
+<div id="lampung" class="foto">
+<img src="About/lampung1.jpg">
+<p>Foto Lampung kamu di sini</p>
+</div>
+</div>
+
+<!-- 4. PAPANDAYAN -->
+<div class="card">
+<h3>⛰️ Papandayan</h3>
+<img src="About/papandayan1.jpg">
+<button onclick="buka('papandayan')">Lihat Foto</button>
+<div id="papandayan" class="foto">
+<img src="About/papandayan1.jpg">
+<p>Foto Papandayan kamu di sini</p>
+</div>
+</div>
+
+<!-- KALO MAU NAMBAH ALBUM BARU, COPY DARI SINI KE BAWAH, TARO DI ATAS </body> -->
+
+<script>
+function buka(id){
+  var el = document.getElementById(id);
+  if(el.style.display === "block"){ el.style.display = "none"; }
+  else { el.style.display = "block"; }
+}
+</script>
+
+</body>
+  </html>
